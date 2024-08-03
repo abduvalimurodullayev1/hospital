@@ -1,0 +1,903 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Abduvali's Hospital</title>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Place favicon.png in the root directory -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/x-icon"/>
+    <!-- Font Icons css -->
+    <link rel="stylesheet" href="{% static 'css/font-icons.css' %}">
+    <!-- plugins css -->
+    <link rel="stylesheet" href="{% static 'css/plugins.css' %}">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+</head>
+
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+    your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+
+<!-- Body main wrapper start -->
+<div class="body-wrapper">
+
+    <!-- HEADER AREA START (header-3) -->
+    <header class="ltn__header-area ltn__header-3">
+        <!-- ltn__header-top-area start -->
+        <div class="ltn__header-top-area border-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="ltn__top-bar-menu">
+                            <ul>
+                                <li>
+                                    <a href="mailto:murodullayevabduvali972@gmail.com?Subject=Flower%20greetings%20to%20you"><i
+                                            class="icon-mail"></i> murodullayevabduvali972@gmail.com</a></li>
+                                <li><a href="{% url 'locations' %}"><i class="icon-placeholder"></i>Uzbekistan</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="top-bar-right text-right text-end">
+                            <div class="ltn__top-bar-menu">
+                                <ul>
+                                    <li>
+                                        <!-- ltn__language-menu -->
+                                        <div class="ltn__drop-menu ltn__currency-menu ltn__language-menu">
+                                            <ul>
+                                                <li><a href="#" class="dropdown-toggle"><span class="active-currency">English</span></a>
+                                                    <ul>
+                                                        <li><a href="#">Arabic</a></li>
+                                                        <li><a href="#">Bengali</a></li>
+                                                        <li><a href="#">Chinese</a></li>
+                                                        <li><a href="#">English</a></li>
+                                                        <li><a href="#">French</a></li>
+                                                        <li><a href="#">Hindi</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <!-- ltn__social-media -->
+                                        <div class="ltn__social-media">
+                                            <ul>
+                                                <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                                </li>
+                                                <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+
+                                                <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                                                </li>
+                                                <li><a href="#" title="Dribbble"><i class="fab fa-dribbble"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ltn__header-top-area end -->
+        <!-- ltn__header-middle-area start -->
+        <div class="ltn__header-middle-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="site-logo">
+                            <a href="{% url 'index' %}"><img src="{% static 'img/logo.png' %}" alt="Logo"></a>
+                        </div>
+                    </div>
+                    <div class="col header-contact-serarch-column d-none d-lg-block">
+                        <div class="header-contact-search">
+                            <!-- header-feature-item -->
+                            <div class="header-feature-item">
+                                <div class="header-feature-icon">
+                                    <i class="icon-call"></i>
+                                </div>
+                                <div class="header-feature-info">
+                                    <h6>Phone</h6>
+                                    <p><a href="tel:0123456789">+0123-456-789</a></p>
+                                </div>
+                            </div>
+                            <!-- header-search-2 -->
+                            <div class="header-search-2">
+                                <form id="#123" method="get" action="#">
+                                    <input type="text" name="search" value="" placeholder="Search here..."/>
+                                    <button type="submit">
+                                        <span><i class="icon-search"></i></span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <!-- header-options -->
+                        <div class="ltn__header-options">
+                            <ul>
+                                <li class="d-none">
+                                    <!-- ltn__currency-menu -->
+                                    <div class="ltn__drop-menu ltn__currency-menu">
+                                        <ul>
+                                            <li><a href="#" class="dropdown-toggle"><span
+                                                    class="active-currency">USD</span></a>
+                                                <ul>
+                                                    <li><a href="{% url 'wishlist' %}">CAD - Canada Dollar</a></li>
+                                                    <li><a href="{% url 'account' %}">GBP - British Pound</a></li>
+                                                    <li><a href="{% url 'wishlist' %}">INR - Indian Rupee</a></li>
+                                                    <li><a href="{% url 'wishlist' %}">BDT - Bangladesh Taka</a></li>
+                                                    <li><a href="{% url 'wishlist' %}">JPY - Japan Yen</a></li>
+                                                    <li><a href="{% url 'wishlist' %}">AUD - Australian Dollar</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="d-lg-none">
+                                    <!-- header-search-1 -->
+                                    <div class="header-search-wrap">
+                                        <div class="header-search-1">
+                                            <div class="search-icon">
+                                                <i class="icon-search  for-search-show"></i>
+                                                <i class="icon-cancel  for-search-close"></i>
+                                            </div>
+                                        </div>
+                                        <div class="header-search-1-form">
+                                            <form id="#" method="get" action="#">
+                                                <input type="text" name="search" value="" placeholder="Search here..."/>
+                                                <button type="submit">
+                                                    <span><i class="icon-search"></i></span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="d-none---">
+                                    <!-- user-menu -->
+                                    <div class="ltn__drop-menu user-menu">
+                                        <ul>
+                                            <li>
+                                                <a href="#"><i class="icon-user"></i></a>
+                                                <ul>
+
+                                                    <li><a href="{% url 'account' %}">My Account</a></li>
+                                                    <li><a href="{% url 'wishlist' %}">Wishlist</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <!-- mini-cart 2 -->
+                                    <div class="mini-cart-icon mini-cart-icon-2">
+                                        <a href="#ltn__utilize-cart-menu" class="ltn__utilize-toggle">
+                                            <span class="mini-cart-icon">
+                                                <i class="icon-shopping-cart"></i>
+                                                <sup>2</sup>
+                                            </span>
+                                            <h6><span>Your Cart</span> <span class="ltn__secondary-color">$89.25</span>
+                                            </h6>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ltn__header-middle-area end -->
+        <!-- header-bottom-area start -->
+        <div class="header-bottom-area ltn__border-top ltn__header-sticky  ltn__sticky-bg-white--- ltn__sticky-bg-secondary ltn__secondary-bg section-bg-1 menu-color-white d-none d-lg-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col header-menu-column justify-content-center">
+                        <div class="sticky-logo">
+                            <div class="site-logo">
+                                <a href="{% url 'index' %}"><img src="{% static 'img/logo-3.png' %}" alt="Logo"></a>
+                            </div>
+                        </div>
+                        <div class="header-menu header-menu-2">
+                            <nav>
+                                <div class="ltn__main-menu">
+                                    <ul>
+                                        <li class="menu-icon"><a href="{% url 'index' %}">Home</a>
+                                            <ul class="sub-menu menu-pages-img-show ltn__sub-menu-col-2---">
+                                                <li>
+                                                    <a href="{% url 'index' %}">Home Style 01</a>
+                                                    <img src="{% static 'img/home-demos/home-1.jpg' %}" alt="#">
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                        <li class="menu-icon"><a href="{% url 'about' %}">About</a>
+                                            <ul>
+                                                <li><a href="{% url 'about' %}">About</a></li>
+                                                <li><a href="{% url 'service' %}">Services</a></li>
+                                                <li><a href="{% url 'portfolio' %}">Gallery</a></li>
+                                                <li><a href="{% url 'team' %}">Team</a></li>
+                                                <li><a href="{% url 'locations' %}">Google Map Locations</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{% url 'shop' %}">Shop</a></li>
+
+                                        <li><a href="#">Other Pages <span class="float-right">>></span></a>
+                                            <ul>
+                                                <li><a href="{% url 'cart' %}">Cart</a></li>
+                                                <li><a href="{% url 'wishlist' %}">Wishlist</a></li>
+                                                <li><a href="{% url 'checkout' %}">Checkout</a></li>
+                                                <li><a href="{% url 'account' %}">My Account</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    </li>
+                                    <li class="menu-icon"><a href="#">News</a>
+                                        <ul>
+                                            <li><a href="{% url 'blog' %}">News</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="menu-icon"><a href="#">Pages</a>
+                                        <ul class="mega-menu">
+                                            <li><a href="#">Inner Pages</a>
+                                                <ul>
+                                                    <li><a href="{% url 'portfolio' %}">Gallery</a></li>
+                                                    Details</a></li>
+                                                    <li><a href="{% url 'team' %}">Team</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Inner Pages</a>
+                                                <ul>
+                                                    <li><a href="{% url 'contact' %}">Appointment</a></li>
+                                                    <li><a href="{% url 'locations' %}">Google Map Locations</a>
+                                                    </li>
+                                                    <li><a href="{% url 'not_404' %}">404</a></li>
+                                                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Shop Pages</a>
+                                                <ul>
+                                                    <li><a href="{% url 'shop' %}">Shop</a></li>
+
+                                                    <li><a href="{% url 'cart' %}">Cart</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="{% url 'shop' %}"><img
+                                                    src="{% static 'img/banner/menu-banner-1.png' %}"
+                                                    alt="#"></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header-bottom-area end -->
+    </header>
+    <!-- HEADER AREA END -->
+
+    <!-- MOBILE MENU START -->
+    <div class="mobile-header-menu-fullwidth mb-30 d-block d-lg-none">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Mobile Menu Button -->
+                    <div class="mobile-menu-toggle d-lg-none">
+                        <span>MENU</span>
+                        <a href="#ltn__utilize-mobile-menu" class="ltn__utilize-toggle">
+                            <svg viewBox="0 0 800 600">
+                                <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200"
+                                      id="top"></path>
+                                <path d="M300,320 L540,320" id="middle"></path>
+                                <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190"
+                                      id="bottom"
+                                      transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MOBILE MENU END -->
+
+    <!-- Utilize Cart Menu Start -->
+    <div id="ltn__utilize-cart-menu" class="ltn__utilize ltn__utilize-cart-menu">
+        <div class="ltn__utilize-menu-inner ltn__scrollbar">
+            <div class="ltn__utilize-menu-head">
+                <span class="ltn__utilize-menu-title">Cart</span>
+                <button class="ltn__utilize-close">×</button>
+            </div>
+            <div class="mini-cart-product-area ltn__scrollbar">
+                <div class="mini-cart-item clearfix">
+                    <div class="mini-cart-img">
+                        <a href="#"><img src="{% static 'img/product/1.png' %}" alt="Image"></a>
+                        <span class="mini-cart-item-delete"><i class="icon-cancel"></i></span>
+                    </div>
+                    <div class="mini-cart-info">
+                        <h6><a href="#">Antiseptic Spray</a></h6>
+                        <span class="mini-cart-quantity">1 x $65.00</span>
+                    </div>
+                </div>
+                <div class="mini-cart-item clearfix">
+                    <div class="mini-cart-img">
+                        <a href="#"><img src="{% static 'img/product/2.png' %}" alt="Image"></a>
+                        <span class="mini-cart-item-delete"><i class="icon-cancel"></i></span>
+                    </div>
+                    <div class="mini-cart-info">
+                        <h6><a href="#">Digital Stethoscope</a></h6>
+                        <span class="mini-cart-quantity">1 x $85.00</span>
+                    </div>
+                </div>
+                <div class="mini-cart-item clearfix">
+                    <div class="mini-cart-img">
+                        <a href="#"><img src="{% static 'img/product/3.png' %}" alt="Image"></a>
+                        <span class="mini-cart-item-delete"><i class="icon-cancel"></i></span>
+                    </div>
+                    <div class="mini-cart-info">
+                        <h6><a href="#">Cosmetic Containers</a></h6>
+                        <span class="mini-cart-quantity">1 x $92.00</span>
+                    </div>
+                </div>
+                <div class="mini-cart-item clearfix">
+                    <div class="mini-cart-img">
+                        <a href="#"><img src="{% static 'img/product/4.png' %}" alt="Image"></a>
+                        <span class="mini-cart-item-delete"><i class="icon-cancel"></i></span>
+                    </div>
+                    <div class="mini-cart-info">
+                        <h6><a href="#">Thermometer Gun</a></h6>
+                        <span class="mini-cart-quantity">1 x $68.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mini-cart-footer">
+                <div class="mini-cart-sub-total">
+                    <h5>Subtotal: <span>$310.00</span></h5>
+                </div>
+                <div class="btn-wrapper">
+                    <a href="{% url 'cart' %}" class="theme-btn-1 btn btn-effect-1">View Cart</a>
+                    <a href="{% url 'cart' %}" class="theme-btn-2 btn btn-effect-2">Checkout</a>
+                </div>
+                <p>Free Shipping on All Orders Over $100!</p>
+            </div>
+
+        </div>
+    </div>
+    <!-- Utilize Cart Menu End -->
+
+    <!-- Utilize Mobile Menu Start -->
+    <div id="ltn__utilize-mobile-menu" class="ltn__utilize ltn__utilize-mobile-menu">
+        <div class="ltn__utilize-menu-inner ltn__scrollbar">
+            <div class="ltn__utilize-menu-head">
+                <div class="site-logo">
+                    <a href="{% url 'index' %}"><img src="{% static 'img/logo.png' %}" alt="Logo"></a>
+                </div>
+                <button class="ltn__utilize-close">×</button>
+            </div>
+            <div class="ltn__utilize-menu-search-form">
+                <form action="#">
+                    <input type="text" placeholder="Search...">
+                    <button><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div class="ltn__utilize-menu">
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a>
+                        <ul class="sub-menu">
+
+                        </ul>
+                    </li>
+                    <li><a href="#">About</a>
+                        <ul class="sub-menu">
+                            <li><a href="{% url 'about' %}">About</a></li>
+                            <li><a href="{% url 'service' %}">Services</a></li>
+                            <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+                            <li><a href="{% url 'team' %}">Team</a></li>
+                            <li><a href="{% url 'locations' %}">Google Map Locations</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{% url 'shop' %}">Shop</a>
+                        <ul class="sub-menu">
+                            <li><a href="{% url 'shop' %}">Shop</a></li>
+                            <li><a href="{% url 'cart' %}">Cart</a></li>
+                            <li><a href="{% url 'wishlist' %}">Wishlist</a></li>
+                            <li><a href="{% url 'checkout' %}">Checkout</a></li>
+                            <li><a href="{% url 'account' %}">My Account</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="{% url 'blog' %}">News</a>
+                        <ul class="sub-menu">
+                            <li><a href="{% url 'blog' %}">News</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Pages</a>
+                        <ul class="sub-menu">
+                            <li><a href="{% url 'about' %}">About</a></li>
+                            <li><a href="{% url 'service' %}">Services</a></li>
+                            <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+                            <li><a href="{% url 'team' %}">Team</a></li>
+                            <li><a href="{% url 'locations' %}">Google Map Locations</a></li>
+                            <li><a href="{% url 'not_404' %}">404</a></li>
+                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </div>
+            <div class="ltn__utilize-buttons ltn__utilize-buttons-2">
+                <ul>
+                    <li>
+                        <a href="{% url 'account' %}" title="My Account">
+                            <span class="utilize-btn-icon">
+                                <i class="far fa-user"></i>
+                            </span>
+                            My Account
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'wishlist' %}" title="Wishlist">
+                            <span class="utilize-btn-icon">
+                                <i class="far fa-heart"></i>
+                                <sup>3</sup>
+                            </span>
+                            Wishlist
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'cart' %}" title="Shoping Cart">
+                            <span class="utilize-btn-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                                <sup>5</sup>
+                            </span>
+                            Shoping Cart
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ltn__social-media-2">
+                <ul>
+                    <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Utilize Mobile Menu End -->
+
+    <div class="ltn__utilize-overlay"></div>
+
+    <!-- BREADCRUMB AREA START -->
+    <div class="ltn__breadcrumb-area text-left bg-overlay-white-30 bg-image " data-bs-bg="{% static 'img/bg/14.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ltn__breadcrumb-inner">
+                        <h1 class="page-title">Checkout</h1>
+                        <div class="ltn__breadcrumb-list">
+                            <ul>
+                                <li><a href="{% url 'index' %}"><span class="ltn__secondary-color"><i
+                                        class="fas fa-home"></i></span> Home</a></li>
+                                <li>Checkout</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BREADCRUMB AREA END -->
+
+    <!-- WISHLIST AREA START -->
+    <div class="ltn__checkout-area mb-105">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ltn__checkout-inner">
+                        <div class="ltn__checkout-single-content ltn__returning-customer-wrap">
+                            <h5>Returning customer? <a class="ltn__secondary-color"
+                                                       href="#ltn__returning-customer-login" data-bs-toggle="collapse">Click
+                                here to login</a></h5>
+                            <div id="ltn__returning-customer-login" class="collapse ltn__checkout-single-content-info">
+                                <div class="ltn_coupon-code-form ltn__form-box">
+                                    <p>Please login your accont.</p>
+                                    <form action="#">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="input-item input-item-name ltn__custom-icon">
+                                                    <input type="text" name="ltn__name" placeholder="Enter your name">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-item input-item-email ltn__custom-icon">
+                                                    <input type="email" name="ltn__email"
+                                                           placeholder="Enter email address">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="btn theme-btn-1 btn-effect-1 text-uppercase">Login</button>
+                                        <label class="input-info-save mb-0"><input type="checkbox" name="agree">
+                                            Remember me</label>
+                                        <p class="mt-30"><a href="{% url 'ter' %}">Lost your password?</a></p>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ltn__checkout-single-content ltn__coupon-code-wrap">
+                            <h5>Have a coupon? <a class="ltn__secondary-color" href="#ltn__coupon-code"
+                                                  data-bs-toggle="collapse">Click here to enter your code</a></h5>
+                            <div id="ltn__coupon-code" class="collapse ltn__checkout-single-content-info">
+                                <div class="ltn__coupon-code-form">
+                                    <p>If you have a coupon code, please apply it below.</p>
+                                    <form action="#">
+                                        <input type="text" name="coupon-code" placeholder="Coupon code">
+                                        <button class="btn theme-btn-2 btn-effect-2 text-uppercase">Apply Coupon
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ltn__checkout-single-content mt-50">
+                            <h4 class="title-2">Billing Details</h4>
+                            <div class="ltn__checkout-single-content-info">
+                                <form method="POST" action="{% url 'checkout' %}">
+                                    {% csrf_token %}
+                                    <h6>Personal Information</h6>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="input-item input-item-name ltn__custom-icon">
+                                                {{ form.first_name }}
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-item input-item-name ltn__custom-icon">
+                                                {{ form.last_name }}
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-item input-item-email ltn__custom-icon">
+                                                {{ form.email }}
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-item input-item-phone ltn__custom-icon">
+                                                {{ form.phone }}
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-item input-item-website ltn__custom-icon">
+                                                {{ form.company }}
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-item input-item-website ltn__custom-icon">
+                                                {{ form.company_address }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6">
+                                            <h6>Country</h6>
+                                            <div class="input-item">
+                                                {{ form.country }}
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12">
+                                            <h6>Address</h6>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="input-item">
+                                                        {{ form.address1 }}
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="input-item">
+                                                        {{ form.address2 }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6">
+                                            <h6>Town / City</h6>
+                                            <div class="input-item">
+                                                {{ form.city }}
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6">
+                                            <h6>State</h6>
+                                            <div class="input-item">
+                                                {{ form.state }}
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6">
+                                            <h6>Zip</h6>
+                                            <div class="input-item">
+                                                {{ form.zipcode }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p><label class="input-info-save mb-0"><input type="checkbox" name="create_account">
+                                        Create an account?</label></p>
+                                    <h6>Order Notes (optional)</h6>
+                                    <div class="input-item input-item-textarea ltn__custom-icon">
+                                        {{ form.order_notes }}
+                                    </div>
+                                    <button type="submit">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ltn__checkout-payment-method mt-50">
+                        <h4 class="title-2">Payment Method</h4>
+                        <div id="checkout_accordion_1">
+                            <!-- card -->
+                            <div class="card">
+                                <h5 class="collapsed ltn__card-title" data-bs-toggle="collapse"
+                                    data-bs-target="#faq-item-2-1" aria-expanded="false">
+                                    Check payments
+                                </h5>
+                                <div id="faq-item-2-1" class="collapse" data-bs-parent="#checkout_accordion_1">
+                                    <div class="card-body">
+                                        <p>Please send a check to Store Name, Store Street, Store Town, Store State /
+                                            County, Store Postcode.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card -->
+                            <div class="card">
+                                <h5 class="ltn__card-title" data-bs-toggle="collapse" data-bs-target="#faq-item-2-2"
+                                    aria-expanded="true">
+                                    Cash on delivery
+                                </h5>
+                                <div id="faq-item-2-2" class="collapse show" data-bs-parent="#checkout_accordion_1">
+                                    <div class="card-body">
+                                        <p>Pay with cash upon delivery.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card -->
+                            <div class="card">
+                                <h5 class="collapsed ltn__card-title" data-bs-toggle="collapse"
+                                    data-bs-target="#faq-item-2-3" aria-expanded="false">
+                                    PayPal <img src="{% static 'img/icons/payment-3.png' %}" alt="#">
+                                </h5>
+                                <div id="faq-item-2-3" class="collapse" data-bs-parent="#checkout_accordion_1">
+                                    <div class="card-body">
+                                        <p>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal
+                                            account.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ltn__payment-note mt-30 mb-30">
+                            <p>Your personal data will be used to process your order, support your experience throughout
+                                this website, and for other purposes described in our privacy policy.</p>
+                        </div>
+                        <button class="btn theme-btn-1 btn-effect-1 text-uppercase" type="submit">Place order</button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="shoping-cart-total mt-50">
+                        <h4 class="title-2">Cart Totals</h4>
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <td>Digital Stethoscope <strong>× 2</strong></td>
+                                <td>$298.00</td>
+                            </tr>
+                            <tr>
+                                <td>Cosmetic Containers <strong>× 2</strong></td>
+                                <td>$170.00</td>
+                            </tr>
+                            <tr>
+                                <td>Antiseptic Spray <strong>× 2</strong></td>
+                                <td>$150.00</td>
+                            </tr>
+                            <tr>
+                                <td>Shipping and Handing</td>
+                                <td>$15.00</td>
+                            </tr>
+                            <tr>
+                                <td>Vat</td>
+                                <td>$00.00</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Order Total</strong></td>
+                                <td><strong>$633.00</strong></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- WISHLIST AREA START -->
+
+    <!-- CALL TO ACTION START (call-to-action-6) -->
+    <div class="ltn__call-to-action-area call-to-action-6 before-bg-bottom" data-bs-bg="{% static 'img/1.jpg--' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="call-to-action-inner call-to-action-inner-6 ltn__secondary-bg position-relative text-center---">
+                        <div class="coll-to-info text-color-white">
+                            <h1>Buy medical disposable face mask <br> to protect your loved ones</h1>
+                        </div>
+                        <div class="btn-wrapper">
+                            <a class="btn btn-effect-3 btn-white" href="{% url 'shop' %}">Explore Products <i
+                                    class="icon-next"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CALL TO ACTION END -->
+
+    <!-- FOOTER AREA START -->
+    <footer class="ltn__footer-area  ">
+        <div class="footer-top-area  section-bg-1 plr--5">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-3 col-md-6 col-sm-6 col-12">
+                        <div class="footer-widget footer-about-widget">
+                            <div class="footer-logo">
+                                <div class="site-logo">
+                                    <img src="{% static 'img/logo.png' %}" alt="Logo">
+                                </div>
+                            </div>
+                            <p>Lorem Ipsum is simply dummy text of the and typesetting industry. Lorem Ipsum is dummy
+                                text of the printing.</p>
+                            <div class="footer-address">
+                                <ul>
+                                    <li>
+                                        <div class="footer-address-icon">
+                                            <i class="icon-placeholder"></i>
+                                        </div>
+                                        <div class="footer-address-info">
+                                            <p>Uzbekistan</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="footer-address-icon">
+                                            <i class="icon-call"></i>
+                                        </div>
+                                        <div class="footer-address-info">
+                                            <p><a href="tel:+998977532006">+998-97-753-20-06</a></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="footer-address-icon">
+                                            <i class="icon-mail"></i>
+                                        </div>
+                                        <div class="footer-address-info">
+                                            <p><a href="mailto:example@example.com">example@example.com</a></p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ltn__social-media mt-20">
+                                <ul>
+                                    <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+                                    <li><a href="#" title="Youtube"><i class="fab fa-youtube"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-sm-6 col-12">
+                        <div class="footer-widget footer-menu-widget clearfix">
+                            <h4 class="footer-title">Company</h4>
+                            <div class="footer-menu">
+                                <ul>
+                                    <li><a href="{% url 'about' %}">About</a></li>
+                                    <li><a href="{% url 'blog' %}">Blog</a></li>
+                                    <li><a href="{% url 'shop' %}">All Products</a></li>
+                                    <li><a href="{% url 'locations' %}">Locations Map</a></li>
+                                    <li><a href="{% url 'contact' %}">Contact us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-sm-6 col-12">
+                        <div class="footer-widget footer-menu-widget clearfix">
+                            <h4 class="footer-title">Services</h4>
+                            <div class="footer-menu">
+                                <ul>
+                                    <li><a href="{% url 'wishlist' %}">Wish List</a></li>
+                                    <li><a href="{% url 'account' %}">My account</a></li>
+                                    <li><a href="{% url 'about' %}">Terms & Conditions</a></li>
+                                    <li><a href="{% url 'about' %}">Promotional Offers</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-md-6 col-sm-6 col-12">
+                        <div class="footer-widget footer-menu-widget clearfix">
+                            <h4 class="footer-title">Customer Care</h4>
+                            <div class="footer-menu">
+                                <ul>
+                                    <li><a href="{% url 'account' %}">My account</a></li>
+                                    <li><a href="{% url 'wishlist' %}">Wish List</a></li>
+
+                                    <li><a href="{% url 'contact' %}">Contact us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-sm-12 col-12">
+                        <div class="footer-widget footer-newsletter-widget">
+                            <h4 class="footer-title">Newsletter</h4>
+                            <p>Subscribe to our weekly Newsletter and receive updates via email.</p>
+                            <div class="footer-newsletter">
+                                <form action="#">
+                                    <input type="email" name="email" placeholder="Email*">
+                                    <div class="btn-wrapper">
+                                        <button class="theme-btn-1 btn" type="submit"><i
+                                                class="fas fa-location-arrow"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                            <h5 class="mt-30">We Accept</h5>
+                            <img src="{% static 'img/icons/payment-4.png' %}" alt="Payment Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ltn__copyright-area ltn__copyright-2 section-bg-7  plr--5">
+            <div class="container-fluid ltn__border-top-2">
+                <div class="row">
+                    <div class="col-md-6 col-12">
+                        <div class="ltn__copyright-design clearfix">
+                            <p>All Rights Reserved @ Company <span class="current-year"></span></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 align-self-center">
+                        <div class="ltn__copyright-menu text-end">
+                            <ul>
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Claim</a></li>
+                                <li><a href="#">Privacy & Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER AREA END -->
+</div>
+<!-- Body main wrapper end -->
+
+<!-- All JS Plugins -->
+<script src="{% static 'js/plugins.js' %}"></script>
+<!-- Main JS -->
+<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>
+

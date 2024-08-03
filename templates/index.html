@@ -1,0 +1,1557 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Abduvali's Hospital</title>
+    <meta name="robots" content="noindex, follow"/>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Place favicon.png in the root directory -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/x-icon"/>
+    <!-- Font Icons css -->
+    <link rel="stylesheet" href="{% static 'css/font-icons.css' %}">
+    <!-- plugins css -->
+    <link rel="stylesheet" href="{% static 'css/plugins.css' %}">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+</head>
+
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+    your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+
+<!-- Body main wrapper start -->
+<div class="body-wrapper">
+
+    <!-- HEADER AREA START (header-5) -->
+    <header class="ltn__header-area ltn__header-5 ltn__header-logo-and-mobile-menu-in-mobile--- ltn__header-logo-and-mobile-menu--- ltn__header-transparent gradient-color-4---">
+        <!-- ltn__header-top-area start -->
+        <div class="ltn__header-top-area border-bottom top-area-color-white---">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="ltn__top-bar-menu">
+                            <ul>
+                                <li>
+                                    <a href="mailto:murodullayevabduvali972@gmail.com?Subject=Flower%20greetings%20to%20you"><i
+                                            class="icon-mail"></i> murodullayevabduvali972@gmail.com</a></li>
+                                <li><a href=""><i class="icon-placeholder"></i> Uzbekistan</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="top-bar-right text-end">
+                            <div class="ltn__top-bar-menu">
+                                <ul>
+                                    <li>
+                                        <!-- ltn__language-menu -->
+                                        <div class="ltn__drop-menu ltn__currency-menu ltn__language-menu">
+                                            <ul>
+                                                {% load i18n %}
+                                                <li><a href="#" class="dropdown-toggle"><span
+                                                        class="active-currency">{% trans "Language" %}</span></a>
+
+                                                    <ul>
+                                                        <li>
+                                                            <a href="{% url 'set_language' %}?language=uz">{% trans "O‘zbekcha" %}</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="{% url 'set_language' %}?language=ru">{% trans "Русский" %}</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="{% url 'set_language' %}?language=en">{% trans "English" %}</a>
+                                                        </li>
+                                                    </ul>
+
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <!-- ltn__social-media -->
+                                        <div class="ltn__social-media">
+                                            <ul>
+                                                <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                                </li>
+                                                <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                                                </li>
+                                                <li><a href="#" title="Dribbble"><i class="fab fa-dribbble"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ltn__header-top-area end -->
+        <!-- ltn__header-middle-area start -->
+        <div class="ltn__header-middle-area ltn__logo-right-menu-option ltn__header-row-bg-white ltn__header-padding ltn__header-sticky ltn__sticky-bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="site-logo-wrap">
+                            <div class="site-logo">
+                                <a href="{% url 'index' %}"><img src="{% static 'img/logo.png' %}" alt="Logo"></a>
+                            </div>
+                            <div class="get-support clearfix d-none">
+                                <div class="get-support-icon">
+                                    <i class="icon-call"></i>
+                                </div>
+                                <div class="get-support-info">
+                                    <h6>Get Support</h6>
+                                    <h4><a href="tel:+123456789">+998-97-753-20-06</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col header-menu-column menu-color-white---">
+                        <div class="header-menu d-none d-xl-block">
+                            <nav>
+                                <div class="ltn__main-menu">
+                                    <ul>
+                                        <li class="menu-icon"><a href="{% url 'index' %}">Home</a>
+                                            <ul class="sub-menu menu-pages-img-show ltn__sub-menu-col-2---">
+                                                <li>
+
+                                                </li>
+                                                <li>
+
+                                                </li>
+                                                <li>
+
+                                                </li>
+                                            </ul>
+                                        </li>
+
+
+                                        <li class="menu-icon"><a href="{% url 'about' %}">About</a>
+                                            <ul>
+                                                <li><a href="{% url 'about' %}">About</a></li>
+                                                <li><a href="{% url 'service' %}">Services</a></li>
+                                                <li><a href="{% url 'portfolio' %}">Gallery</a></li>
+                                                <li><a href="{% url 'team' %}">Team</a></li>
+                                                {#                                                <li><a href="{% url 'locations' %}">Google Map Locations</a></li>#}
+                                            </ul>
+                                        </li>
+                                        <li class="menu-icon"><a href="{% url 'shop' %}">Shop</a>
+                                            <ul>
+                                                <li><a href="{% url 'shop' %}">Shop</a></li>
+
+                                                <li><a href="#">Other Pages <span class="float-right">>></span></a>
+                                                    <ul>
+                                                        <li><a href="{% url 'cart' %}">Cart</a></li>
+                                                        <li><a href="{% url 'wishlist' %}">Wishlist</a></li>
+                                                        <li><a href="{% url 'checkout' %}">Checkout</a></li>
+
+
+                                                        <li><a href="{% url 'register' %}">Register</a></li>
+
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-icon"><a href="{% url 'blog' %}">News</a>
+                                            <ul>
+                                                <li><a href="{% url 'blog' %}">News</a></li>
+
+                                            </ul>
+                                        </li>
+                                        <li class="menu-icon"><a href="#">Pages</a>
+                                            <ul class="mega-menu">
+                                                <li><a href="#">Inner Pages</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'portfolio' %}">Gallery</a></li>
+
+                                                        <li><a href="{% url 'team' %}">Team</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Inner Pages</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'contact' %}">Appointment</a></li>
+                                                        {#                                                        <li><a href="{% url 'locations' %}">Google Map Locations</a>#}
+                                                        </li>
+                                                        <li><a href="{% url 'contact' %}">Contact</a></li>
+
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Shop Pages</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'shop' %}">Shop</a></li>
+                                                        <li><a href="{% url 'cart' %}">Cart</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="{% url 'shop' %}"><img
+                                                        src="{% static 'img/banner/menu-banner-1.png' %}" alt="#"></a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col--- ltn__header-options ltn__header-options-2 mb-sm-20">
+                        <!-- header-search-1 -->
+                        <div class="header-search-wrap">
+                            <div class="header-search-1">
+                                <div class="search-icon">
+                                    <i class="icon-search for-search-show"></i>
+                                    <i class="icon-cancel  for-search-close"></i>
+                                </div>
+                            </div>
+                            <div class="header-search-1-form">
+                                <form id="#" method="get" action="#">
+                                    <input type="text" name="search" value="" placeholder="Search here..."/>
+                                    <button type="submit">
+                                        <span><i class="icon-search"></i></span>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- user-menu -->
+                        <div class="ltn__drop-menu user-menu">
+                            <ul>
+                                <li>
+                                    <a href="#"><i class="icon-user"></i></a>
+                                    <ul>
+                                        <li><a href="{% url 'wishlist' %}">Wishlist</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- mini-cart -->
+                        <div class="mini-cart-icon">
+                            <a href="#ltn__utilize-cart-menu" class="ltn__utilize-toggle">
+                                <i class="icon-shopping-cart"></i>
+                                <sup>2</sup>
+                            </a>
+                        </div>
+                        <!-- mini-cart -->
+                        <!-- Mobile Menu Button -->
+                        <div class="mobile-menu-toggle d-xl-none">
+                            <a href="#ltn__utilize-mobile-menu" class="ltn__utilize-toggle">
+                                <svg viewBox="0 0 800 600">
+                                    <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200"
+                                          id="top"></path>
+                                    <path d="M300,320 L540,320" id="middle"></path>
+                                    <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190"
+                                          id="bottom"
+                                          transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ltn__header-middle-area end -->
+    </header>
+    <!-- HEADER AREA END -->
+
+    <!-- Utilize Cart Menu Start -->
+    <div id="ltn__utilize-cart-menu" class="ltn__utilize ltn__utilize-cart-menu">
+        <div class="ltn__utilize-menu-inner ltn__scrollbar">
+            <div class="ltn__utilize-menu-head">
+                <span class="ltn__utilize-menu-title">Cart</span>
+                <button class="ltn__utilize-close">×</button>
+            </div>
+            <div class="mini-cart-product-area ltn__scrollbar">
+                <div class="mini-cart-item clearfix">
+                    <div class="mini-cart-img">
+                        <a href="#"><img src="{% static 'img/product/1.png' %}" alt="Image"></a>
+                        <span class="mini-cart-item-delete"><i class="icon-cancel"></i></span>
+                    </div>
+                    <div class="mini-cart-info">
+                        <h6><a href="#">Antiseptic Spray</a></h6>
+                        <span class="mini-cart-quantity">1 x $65.00</span>
+                    </div>
+                </div>
+                <div class="mini-cart-item clearfix">
+                    <div class="mini-cart-img">
+                        <a href="#"><img src="{% static 'img/product/2.png' %}" alt="Image"></a>
+                        <span class="mini-cart-item-delete"><i class="icon-cancel"></i></span>
+                    </div>
+                    <div class="mini-cart-info">
+                        <h6><a href="#">Digital Stethoscope</a></h6>
+                        <span class="mini-cart-quantity">1 x $85.00</span>
+                    </div>
+                </div>
+                <div class="mini-cart-item clearfix">
+                    <div class="mini-cart-img">
+                        <a href="#"><img src="{% static 'img/product/3.png' %}" alt="Image"></a>
+                        <span class="mini-cart-item-delete"><i class="icon-cancel"></i></span>
+                    </div>
+                    <div class="mini-cart-info">
+                        <h6><a href="#">Cosmetic Containers</a></h6>
+                        <span class="mini-cart-quantity">1 x $92.00</span>
+                    </div>
+                </div>
+                <div class="mini-cart-item clearfix">
+                    <div class="mini-cart-img">
+                        <a href="#"><img src="{% static 'img/product/4.png' %}" alt="Image"></a>
+                        <span class="mini-cart-item-delete"><i class="icon-cancel"></i></span>
+                    </div>
+                    <div class="mini-cart-info">
+                        <h6><a href="#">Thermometer Gun</a></h6>
+                        <span class="mini-cart-quantity">1 x $68.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mini-cart-footer">
+                <div class="mini-cart-sub-total">
+                    <h5>Subtotal: <span>$310.00</span></h5>
+                </div>
+                <div class="btn-wrapper">
+                    <a href="{% url 'cart' %}" class="theme-btn-1 btn btn-effect-1">View Cart</a>
+                    <a href="{% url 'cart' %}" class="theme-btn-2 btn btn-effect-2">Checkout</a>
+                </div>
+                <p>Free Shipping on All Orders Over $100!</p>
+            </div>
+
+        </div>
+    </div>
+    <!-- Utilize Cart Menu End -->
+
+    <!-- Utilize Mobile Menu Start -->
+    <div id="ltn__utilize-mobile-menu" class="ltn__utilize ltn__utilize-mobile-menu">
+        <div class="ltn__utilize-menu-inner ltn__scrollbar">
+            <div class="ltn__utilize-menu-head">
+                <div class="site-logo">
+                    <a href="{% url 'index' %}"><img src="{% static 'img/logo.png' %}" alt="Logo"></a>
+                </div>
+                <button class="ltn__utilize-close">×</button>
+            </div>
+            <div class="ltn__utilize-menu-search-form">
+                <form action="#">
+                    <input type="text" placeholder="Search...">
+                    <button><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div class="ltn__utilize-menu">
+                <ul>
+                    <li><a href="{% url 'index' %}">Home</a>
+                        <ul class="sub-menu">
+
+                        </ul>
+                    </li>
+                    {% if user.is_authenticated %}
+
+                        <li><a href={% url 'about' %}>About</a>
+                            <ul class="sub-menu">
+                                <li><a href="{% url 'about' %}">About</a></li>
+                                <li><a href="{% url 'service' %}">Services</a></li>
+                                <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+                                <li><a href="{% url 'team' %}">Team</a></li>
+                                {#                                <li><a href="{% url 'locations' %}">Google Map Locations</a></li>#}
+                            </ul>
+                        </li>
+                        <li><a href="{% url 'shop' %}">Shop</a>
+                            <ul class="sub-menu">
+                                <li><a href="{% url 'shop' %}">Shop</a></li>
+
+                                <li><a href="{% url 'cart' %}">Cart</a></li>
+                                <li><a href="{% url 'wishlist' %}">Wishlist</a></li>
+                                <li><a href="{% url 'checkout' %}">Checkout</a></li>
+                                {% else %}
+                                <li><a href="{% url 'login' %}">Sign in</a></li>
+                                <li><a href="{% url 'register' %}">Register</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{% url 'blog' %}">News</a>
+                        <ul class="sub-menu">
+                        <li><a href="{% url 'blog' %}">News</a></li>
+                    {% endif %}
+                    </ul>
+                    </li>
+                    <li><a href="#">Pages</a>
+                        <ul class="sub-menu">
+                            {% if user.is_authenticated %}
+
+                                <li><a href="{% url 'about' %}">About</a></li>
+                                <li><a href="{% url 'service' %}">Services</a></li>
+                                <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+                                <li><a href="{% url 'team' %}">Team</a></li>
+                                {#                                <li><a href="{% url 'locations' %}">Google Map Locations</a></li>#}
+                                <li><a href="{% url 'not_404' %}">404</a></li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                                </ul>
+                                </li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                                </ul>
+                                </div>
+                                <div class="ltn__utilize-buttons ltn__utilize-buttons-2">
+                                <ul>
+                            {% endif %}
+                            <li>
+
+                            </li>
+                            <li>
+                                <a href="{% url 'wishlist' %}" title="Wishlist">
+                            <span class="utilize-btn-icon">
+                                <i class="far fa-heart"></i>
+                                <sup>3</sup>
+                            </span>
+                                    Wishlist
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'cart' %}" title="Shoping Cart">
+                            <span class="utilize-btn-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                                <sup>5</sup>
+                            </span>
+                                    Shopping Cart
+                                </a>
+                            </li>
+                            </ul>
+                            </div>
+            <div class="ltn__social-media-2">
+                <ul>
+                    <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Utilize Mobile Menu End -->
+
+    <div class="ltn__utilize-overlay"></div>
+
+    <!-- SLIDER AREA START (slider-3) -->
+    <div class="ltn__slider-area ltn__slider-3  section-bg-1">
+        <div class="ltn__slide-one-active slick-slide-arrow-1 slick-slide-dots-1">
+            <!-- ltn__slide-item -->
+            <div class="ltn__slide-item ltn__slide-item-2  ltn__slide-item-3-normal--- ltn__slide-item-3 bg-image bg-overlay-theme-black-60---"
+                 data-bs-bg="{% static 'img/slider/13.jpg' %}">
+                <div class="ltn__slide-item-inner  text-left">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 align-self-center">
+                                <div class="slide-item-info">
+                                    <div class="slide-item-info-inner ltn__slide-animation">
+                                        <h6 class="slide-sub-title white-color--- animated"><span><i
+                                                class="fas fa-syringe"></i></span> 100% genuine Products</h6>
+                                        <h1 class="slide-title animated ">Get 20% Discount <br>Of N95 Mask</h1>
+                                        <div class="slide-brief animated">
+                                            <p>N95 niqoblar bilan nafas olishni himoya qiling. Ushbu niqoblar yuqori
+                                                darajadagi filtratsiya bilan viruslar va bakteriyalardan samarali himoya
+                                                qiladi. Salomatligingizni saqlang va xavfsizligingizni ta'minlang.
+                                            </p>
+                                        </div>
+                                        <div class="btn-wrapper animated">
+                                            <a href="{% url 'shop' %}" class="theme-btn-1 btn btn-effect-1">Shop Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ltn__slide-item -->
+            <div class="ltn__slide-item ltn__slide-item-2 ltn__slide-item-3-normal--- ltn__slide-item-3 bg-image bg-overlay-theme-black-60---"
+                 data-bs-bg="{% static 'img/slider/11.jpg' %}">
+                <div class="ltn__slide-item-inner text-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 align-self-center">
+                                <div class="slide-item-info">
+                                    <div class="slide-item-info-inner ltn__slide-animation">
+                                        <div class="slide-video mb-50 d-none">
+                                            <a class="ltn__video-icon-2 ltn__video-icon-2-border"
+                                               href="https://www.youtube.com/embed/tlThdr3O5Qo"
+                                               data-rel="lightcase:myCollection">
+                                                <i class="fa fa-play"></i>
+                                            </a>
+                                        </div>
+                                        <h6 class="slide-sub-title white-color--- animated"><span><i
+                                                class="fas fa-syringe"></i></span> 100% genuine Products</h6>
+                                        <h1 class="slide-title animated ">Get 20% Discount <br>Of N95 Mask</h1>
+                                        <div class="slide-brief animated">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                                tempor incididunt ut labore.</p>
+                                        </div>
+                                        <div class="btn-wrapper animated">
+                                            <a href="{% url 'shop' %}" class="theme-btn-1 btn btn-effect-1">Shop Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ltn__slide-item -->
+            <div class="ltn__slide-item ltn__slide-item-2  ltn__slide-item-3-normal--- ltn__slide-item-3 bg-image bg-overlay-theme-black-60---"
+                 data-bs-bg="{% static 'img/slider/12.jpg' %}">
+                <div class="ltn__slide-item-inner  text-right text-end">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 align-self-center">
+                                <div class="slide-item-info">
+                                    <div class="slide-item-info-inner ltn__slide-animation">
+                                        <h6 class="slide-sub-title white-color--- animated"><span><i
+                                                class="fas fa-syringe"></i></span> 100% genuine Products</h6>
+                                        <h1 class="slide-title animated ">Get 20% Discount <br>Of N95 Mask</h1>
+                                        <div class="slide-brief animated">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                                tempor incididunt ut labore.</p>
+                                        </div>
+                                        <div class="btn-wrapper animated">
+                                            <a href="{% url 'shop' %}" class="theme-btn-1 btn btn-effect-1">Shop Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+        </div>
+    </div>
+    <!-- SLIDER AREA END -->
+
+    <!-- CATEGORY AREA START -->
+    <div class="ltn__category-area section-bg-1-- pt-50 pb-90">
+        <div class="container">
+            <div class="row ltn__category-slider-active-six slick-arrow-1 border-bottom">
+                <div class="col-12">
+                    <div class="ltn__category-item ltn__category-item-6 text-center">
+                        <div class="ltn__category-item-img">
+                            <a href="{% url 'shop' %}">
+                                <i class="fas fa-notes-medical"></i>
+                            </a>
+                        </div>
+                        <div class="ltn__category-item-name">
+                            <h6><a href="{% url 'shop' %}">Best Deals</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="ltn__category-item ltn__category-item-6 text-center">
+                        <div class="ltn__category-item-img">
+                            <a href="{% url 'shop' %}">
+                                <i class="fas fa-box-tissue"></i>
+                            </a>
+                        </div>
+                        <div class="ltn__category-item-name">
+                            <h6><a href="{% url 'shop' %}">Germs Pads</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="ltn__category-item ltn__category-item-6 text-center">
+                        <div class="ltn__category-item-img">
+                            <a href="{% url 'shop' %}">
+                                <i class="fas fa-pump-medical"></i>
+                            </a>
+                        </div>
+                        <div class="ltn__category-item-name">
+                            <h6><a href="{% url 'shop' %}">Accessories</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="ltn__category-item ltn__category-item-6 text-center">
+                        <div class="ltn__category-item-img">
+                            <a href="{% url 'shop' %}">
+                                <i class="fas fa-bong"></i>
+                            </a>
+                        </div>
+                        <div class="ltn__category-item-name">
+                            <h6><a href="{% url 'shop' %}">Medicine Cap</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="ltn__category-item ltn__category-item-6 text-center">
+                        <div class="ltn__category-item-img">
+                            <a href="{% url 'shop' %}">
+                                <i class="fas fa-tooth"></i>
+                            </a>
+                        </div>
+                        <div class="ltn__category-item-name">
+                            <h6><a href="{% url 'shop' %}">Dental Item</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="ltn__category-item ltn__category-item-6 text-center">
+                        <div class="ltn__category-item-img">
+                            <a href="{% url 'shop' %}">
+                                <i class="fas fa-microscope"></i>
+                            </a>
+                        </div>
+                        <div class="ltn__category-item-name">
+                            <h6><a href="{% url 'shop' %}">Best Deals</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="ltn__category-item ltn__category-item-6 text-center">
+                        <div class="ltn__category-item-img">
+                            <a href="{% url 'shop' %}">
+                                <i class="fas fa-syringe"></i>
+                            </a>
+                        </div>
+                        <div class="ltn__category-item-name">
+                            <h6><a href="{% url 'shop' %}">All Products</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="ltn__category-item ltn__category-item-6 text-center">
+                        <div class="ltn__category-item-img">
+                            <a href="{% url 'shop' %}">
+                                <i class="fas fa-stethoscope"></i>
+                            </a>
+                        </div>
+                        <div class="ltn__category-item-name">
+                            <h6><a href="{% url 'shop' %}">Germs Pads</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="ltn__category-item ltn__category-item-6 text-center">
+                        <div class="ltn__category-item-img">
+                            <a href="{% url 'shop' %}">
+                                <i class="fas fa-hand-holding-medical"></i>
+                            </a>
+                        </div>
+                        <div class="ltn__category-item-name">
+                            <h6><a href="{% url 'shop' %}">Accessories</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="ltn__category-item ltn__category-item-6 text-center">
+                        <div class="ltn__category-item-img">
+                            <a href="{% url 'shop' %}">
+                                <i class="fas fa-procedures"></i>
+                            </a>
+                        </div>
+                        <div class="ltn__category-item-name">
+                            <h6><a href="{% url 'shop' %}">Medicine Cap</a></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CATEGORY AREA END -->
+
+    <!-- ABOUT US AREA START -->
+    <div class="ltn__about-us-area pt-25 pb-120 ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 align-self-center">
+                    <div class="about-us-img-wrap about-img-left">
+                        <img src="{% static 'img/others/9.png' %}" alt="About Us Image">
+                    </div>
+                </div>
+                <div class="col-lg-6 align-self-center">
+                    <div class="about-us-info-wrap">
+                        <div class="section-title-area ltn__section-title-2--- mb-30">
+                            <h6 class="section-subtitle section-subtitle-2 ltn__secondary-color d-none">About Us</h6>
+                            <h1 class="section-title">Your faithful partners Medical Goods</h1>
+                            <p>Bemorlarga nisbatan shaxsiy ma'lumotlar va maxfiylik uchun yaxshiroq xavfsizlik.</p>
+                        </div>
+                        <ul class="ltn__list-item-1 ltn__list-item-1-before--- clearfix">
+                            <li><i class="fas fa-check-square"></i> Bemorlarga nisbatan shaxsiy ma'lumotlar va maxfiylik
+                                uchun yaxshiroq xavfsizlik.
+
+                            </li>
+                            <li><i class="fas fa-check-square"></i>Past narxlarda ko'proq mahsulotlar.
+                                .
+                            </li>
+                            <li><i class="fas fa-check-square"></i>Mijozlarni e-tijoratning kuchi bilan bog'lang.
+
+                            </li>
+                        </ul>
+                        <div class="about-author-info-2 border-top mt-30 pt-20">
+                            <ul>
+                                <li>
+                                    <div class="about-author-info-2-brief  d-flex">
+                                        <div class="author-img">
+                                            <img src="{% static 'img/blog/author.jpg' %}" alt="#">
+                                        </div>
+                                        <div class="author-name-designation">
+                                            <h4 class="mb-0">Somebody</h4>
+                                            <small>Vrach</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="about-author-info-2-contact  d-flex">
+                                        <div class="about-contact-icon d-flex align-self-center mr-10">
+                                            <i class="icon-call"></i>
+                                        </div>
+                                        <div class="about-author-info-2-contact-info">
+                                            <small>Get Support</small>
+                                            <h6 class="mb-0">123-456-789-10</h6>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ABOUT US AREA END -->
+
+    <!-- BANNER AREA START -->
+    <div class="ltn__banner-area mt-120---">
+        <div class="container">
+            <div class="row ltn__custom-gutter--- justify-content-center">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="ltn__banner-item">
+                        <div class="ltn__banner-img">
+                            <a href="{% url 'shop' %}"><img src="{% static 'img/banner/1.jpg' %}"
+                                                            alt="Banner Image"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="ltn__banner-item">
+                        <div class="ltn__banner-img">
+                            <a href="{% url 'shop' %}"><img src="{% static 'img/banner/2.jpg' %}"
+                                                            alt="Banner Image"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="ltn__banner-item">
+                        <div class="ltn__banner-img">
+                            <a href="{% url 'shop' %}"><img src="{% static 'img/banner/3.jpg' %}"
+                                                            alt="Banner Image"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BANNER AREA END -->
+
+    <!-- PRODUCT AREA START (product-item-3) -->
+    <!-- PRODUCT AREA END -->
+
+    <!-- COUNTDOWN AREA START -->
+    <div class="ltn__call-to-action-area section-bg-1 bg-image pt-120 pb-120" data-bs-bg="{% static 'img/bg/25.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="call-to-action-inner text-color-white--- text-center---">
+                        <div class="section-title-area ltn__section-title-2--- text-center---">
+                            <h6 class="ltn__secondary-color">Todays Hot Offer</h6>
+                            <h1 class="section-title">Bugungi Issiq Taklif
+                                <br>Bepul COVID-19 Vaksina Kampaniyasi Chipta
+                            </h1>
+                            <p>COVID-19 ga qarshi bepul vaksinatsiya kampaniyamizga qo'shiling va sog'lig'ingizni himoya
+                                qiling. Bizning shifoxonamizda vaksina olish imkoniyatini qo'ldan boy bermang. Hozir
+                                ro'yxatdan o'ting va o'zingizni va yaqinlaringizni himoya qiling.
+                            </p>
+                        </div>
+                        <div class="ltn__countdown ltn__countdown-3 bg-white--" data-countdown="2023/12/28"></div>
+                        <div class="btn-wrapper animated">
+                            <a href="{% url 'contact' %}" class="theme-btn-1 btn btn-effect-1 text-uppercase">Book
+                                Now</a>
+                            <a href="{% url 'shop' %}" class="ltn__secondary-color text-decoration-underline">Deal of
+                                The Day</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- COUNTDOWN AREA END -->
+
+    <!-- PRODUCT AREA START (product-item-3) -->
+    <!-- PRODUCT AREA END -->
+
+    <!-- ABOUT US AREA START -->
+    <div class="ltn__about-us-area section-bg-1 bg-image-left-before pt-115 pb-115">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 align-self-center">
+                    <div class="about-us-img-wrap about-img-left---">
+
+                    </div>
+                </div>
+                <div class="col-lg-6 align-self-center">
+                    <div class="about-us-info-wrap">
+                        <div class="section-title-area ltn__section-title-2--- mb-20">
+                            <h6 class="section-subtitle section-subtitle-2--- ltn__secondary-color">N95 Facial Covering
+                                Mask</h6>
+                            <h1 class="section-title">Shoshling!</h1>
+                            <p>Bizning kompaniyamizda 70 dan ortiq mamlakatlarda 39,000 dan ortiq xodim ishlaydi. Ushbu
+                                keng global qamrov va maxsus xizmatlarimiz birlashib, bizga yuqori sifatli tibbiy
+                                xizmatlar ko'rsatish imkonini beradi.
+                            </p>
+                        </div>
+                        <ul class="ltn__list-item-half clearfix">
+                            <li>
+                                <i class="flaticon-home-2"></i>
+                                Activated Carbon
+                            </li>
+                            <li>
+                                <i class="flaticon-mountain"></i>
+                                Breathing Valve
+                            </li>
+                            <li>
+                                <i class="flaticon-heart"></i>
+                                6 Layer Filteration
+                            </li>
+                            <li>
+                                <i class="flaticon-secure"></i>
+                                Rewashes & Reusable
+                            </li>
+                        </ul>
+                        <div class="btn-wrapper animated">
+                            <a href="{% url 'service' %}"
+                               class="ltn__secondary-color text-uppercase text-decoration-underline">View Products</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ABOUT US AREA END -->
+
+    <!-- ABOUT US AREA START -->
+    <div class="ltn__about-us-area bg-overlay-white-90--- bg-image pt-115 pb-110 d-none"
+         data-bs-bg="{% static 'img/bg/26.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 align-self-center">
+                    <div class="about-us-img-wrap about-img-left">
+                    </div>
+                </div>
+                <div class="col-lg-6 align-self-center">
+                    <div class="about-us-info-wrap">
+                        <div class="section-title-area ltn__section-title-2--- mb-20">
+                            <h6 class="section-subtitle section-subtitle-2--- ltn__secondary-color">N95 Facial Covering
+                                Mask</h6>
+                            <h1 class="section-title">Grade A Safety Masks
+                                For Sale. Haurry Up!</h1>
+                            <p>Over 39,000 people work for us in more than 70 countries all over the
+                                This breadth of global coverage, combined with specialist services</p>
+                        </div>
+                        <ul class="ltn__list-item-half clearfix">
+                            <li>
+                                <i class="flaticon-home-2"></i>
+                                Activated Carbon
+                            </li>
+                            <li>
+                                <i class="flaticon-mountain"></i>
+                                Breathing Valve
+                            </li>
+                            <li>
+                                <i class="flaticon-heart"></i>
+                                6 Layer Filteration
+                            </li>
+                            <li>
+                                <i class="flaticon-secure"></i>
+                                Rewashes & Reusable
+                            </li>
+                        </ul>
+                        <div class="btn-wrapper animated">
+                            <a href="{% url 'service' %}"
+                               class="ltn__secondary-color text-uppercase text-decoration-underline">View Products</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ABOUT US AREA END -->
+
+    <!-- PRODUCT AREA START (product-item-3) -->
+    <!-- PRODUCT AREA END -->
+
+    <!-- BANNER AREA START -->
+    <div class="ltn__banner-area mt-120---">
+        <div class="container">
+            <div class="row ltn__custom-gutter--- justify-content-center">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="ltn__banner-item">
+                        <div class="ltn__banner-img">
+                            <a href="{% url 'shop' %}"><img src="{% static 'img/banner/23.jpg' %}"
+                                                            alt="Banner Image"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="ltn__banner-item">
+                        <div class="ltn__banner-img">
+                            <a href="{% url 'shop' %}"><img src="{% static 'img/banner/22.jpg' %}"
+                                                            alt="Banner Image"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="ltn__banner-item">
+                        <div class="ltn__banner-img">
+                            <a href="{% url 'shop' %}"><img src="{% static 'img/banner/21.jpg' %}"
+                                                            alt="Banner Image"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BANNER AREA END -->
+
+    <!-- FEATURE AREA START ( Feature - 3) -->
+    <!-- FEATURE AREA END -->
+
+    <!-- BRAND LOGO AREA START -->
+    <div class="ltn__brand-logo-area ltn__brand-logo-1 section-bg-1--- pt-110--- pb-95 plr--9--- d-none---">
+        <div class="container">
+            <div class="row ltn__brand-logo-active">
+                <div class="col-lg-12">
+                    <div class="ltn__brand-logo-item">
+                        <img src="{% static 'img/brand-logo/1.png' %}" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="ltn__brand-logo-item">
+                        <img src="{% static 'img/brand-logo/2.png' %}" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="ltn__brand-logo-item">
+                        <img src="{% static 'img/brand-logo/3.png' %}" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="ltn__brand-logo-item">
+                        <img src="{% static 'img/brand-logo/4.png' %}" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="ltn__brand-logo-item">
+                        <img src="{% static 'img/brand-logo/5.png' %}" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="ltn__brand-logo-item">
+                        <img src="{% static 'img/brand-logo/3.png' %}" alt="Brand Logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- BRAND LOGO AREA END -->
+
+    <!-- PRODUCT AREA START (product-item-3) -->
+    <div class="ltn__product-area ltn__product-gutter pt-85 pb-70 d-none">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-area ltn__section-title-2 text-center">
+                        <h1 class="section-title">Featured Products</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="ltn__banner-item">
+                                <div class="ltn__banner-img">
+                                    <a href="{% url 'shop' %}"><img src="{% static 'img/banner/13.jpg' %}"
+                                                                    alt="Banner Image"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="ltn__banner-item">
+                                <div class="ltn__banner-img">
+                                    <a href="{% url 'shop' %}"><img src="{% static 'img/banner/12.jpg' %}"
+                                                                    alt="Banner Image"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row ltn__tab-product-slider-one-active--- slick-arrow-1">
+                        <!-- ltn__product-item -->
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                            <div class="ltn__product-item ltn__product-item-2 text-left">
+                                <div class="product-img">
+                                    <a href="product-details.html"><img src="{% static 'img/product/1.png' %}" alt="#"></a>
+                                    <div class="product-badge">
+                                        <ul>
+                                            <li class="sale-badge">New</li>
+                                        </ul>
+                                    </div>
+                                    <div class="product-hover-action">
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Quick View" data-bs-toggle="modal"
+                                                   data-bs-target="#quick_view_modal">
+                                                    <i class="far fa-eye"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Add to Cart" data-bs-toggle="modal"
+                                                   data-bs-target="#add_to_cart_modal">
+                                                    <i class="fas fa-shopping-cart"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="{% url 'wishlist' %}" title="Wishlist" data-bs-toggle="modal"
+                                                   data-bs-target="#liton_wishlist_modal">
+                                                    <i class="far fa-heart"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-ratting">
+                                        <ul>
+                                            <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                            <li><a href="#"><i class="far fa-star"></i></a></li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ltn__product-item -->
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                            <div class="ltn__product-item ltn__product-item-2 text-left">
+                                <div class="product-img">
+                                    <a href="product-details.html"><img src="{% static 'img/product/2.png' %}" alt="#"></a>
+                                    <div class="product-hover-action">
+                                        <ul>
+                                            <li>
+                                                <a href="#" title="Quick View" data-bs-toggle="modal"
+                                                   data-bs-target="#quick_view_modal">
+                                                    <i class="far fa-eye"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" title="Add to Cart" data-bs-toggle="modal"
+                                                   data-bs-target="#add_to_cart_modal">
+                                                    <i class="fas fa-shopping-cart"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="{% url 'wishlist' %}" title="Wishlist" data-bs-toggle="modal"
+                                                   data-bs-target="#liton_wishlist_modal">
+                                                    <i class="far fa-heart"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-ratting">
+                                        <ul>
+                                            <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                            <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                            <li><a href="#"><i class="far fa-star"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--  -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- PRODUCT AREA END -->
+
+<!-- PRODUCT AREA START (product-item-3) -->
+<div class="ltn__product-area ltn__product-gutter pt-85 pb-70 d-none">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title-area ltn__section-title-2 text-center">
+                    <h1 class="section-title">Featured Products</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row ltn__tab-product-slider-one-active--- slick-arrow-1">
+            <!-- ltn__product-item -->
+            <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="ltn__product-item ltn__product-item-3 text-center">
+                    <div class="product-img">
+                        <a href="product-details.html"><img src="{% static 'img/product/1.png' %}" alt="#"></a>
+                        <div class="product-badge">
+                            <ul>
+                                <li class="sale-badge">New</li>
+                            </ul>
+                        </div>
+                        <div class="product-hover-action">
+                            <ul>
+                                <li>
+                                    <a href="#" title="Quick View" data-bs-toggle="modal"
+                                       data-bs-target="#quick_view_modal">
+                                        <i class="far fa-eye"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Add to Cart" data-bs-toggle="modal"
+                                       data-bs-target="#add_to_cart_modal">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" title="Wishlist" data-bs-toggle="modal"
+                                       data-bs-target="#liton_wishlist_modal">
+                                        <i class="far fa-heart"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-ratting">
+                            <ul>
+                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                <li><a href="#"><i class="far fa-star"></i></a></li>
+                            </ul>
+                        </div>
+                        <h2 class="product-title"><a href="product-details.html">Antiseptic Spray</a></h2>
+                        <div class="product-price">
+                            <span>$32.00</span>
+                            <del>$46.00</del>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ltn__product-item -->
+            <!--  -->
+        </div>
+    </div>
+</div>
+<!-- PRODUCT AREA END -->
+
+<!-- CALL TO ACTION START (call-to-action-6) -->
+<div class="ltn__call-to-action-area call-to-action-6 before-bg-bottom d-none"
+     data-bs-bg="{% static 'img/1.jpg--' %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="call-to-action-inner call-to-action-inner-6 ltn__secondary-bg position-relative text-center---">
+                    <div class="coll-to-info text-color-white">
+                        <h1>Buy medical disposable face mask <br> to protect your loved ones</h1>
+                    </div>
+                    <div class="btn-wrapper">
+                        <a class="btn btn-effect-3 btn-white" href="{% url 'shop' %}">Explore Products <i
+                                class="icon-next"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- CALL TO ACTION END -->
+
+<!-- FOOTER AREA START -->
+<footer class="ltn__footer-area  ">
+    <div class="footer-top-area  section-bg-1 plr--5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-3 col-md-6 col-sm-6 col-12">
+                    <div class="footer-widget footer-about-widget">
+                        <div class="footer-logo">
+                            <div class="site-logo">
+                                <img src="{% static 'img/logo.png' %}" alt="Logo">
+                            </div>
+                        </div>
+                        <p>Lorem Ipsum is simply dummy text of the and typesetting industry. Lorem Ipsum is dummy
+                            text of the printing.</p>
+                        <div class="footer-address">
+                            <ul>
+                                <li>
+                                    <div class="footer-address-icon">
+                                        <i class="icon-placeholder"></i>
+                                    </div>
+                                    <div class="footer-address-info">
+                                        <p>Uzbekistan</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="footer-address-icon">
+                                        <i class="icon-call"></i>
+                                    </div>
+                                    <div class="footer-address-info">
+                                        <p><a href="tel:+998977532006">+998-97-753-20-06</a></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="footer-address-icon">
+                                        <i class="icon-mail"></i>
+                                    </div>
+                                    <div class="footer-address-info">
+                                        <p><a href="mailto:murodullayevabduvali972@gmail.com">murodullayevabduvali972@gmail.com</a>
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ltn__social-media mt-20">
+                            <ul>
+                                <li><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href="#" title="Youtube"><i class="fab fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-6 col-sm-6 col-12">
+                    <div class="footer-widget footer-menu-widget clearfix">
+                        <h4 class="footer-title">Company</h4>
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="{% url 'about' %}">About</a></li>
+                                <li><a href="{% url 'blog' %}">Blog</a></li>
+                                <li><a href="{% url 'shop' %}">All Products</a></li>
+                                {#                                <li><a href="{% url 'locations' %}">Locations Map</a></li>#}
+                                <li><a href="{% url 'contact' %}">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-6 col-sm-6 col-12">
+                    <div class="footer-widget footer-menu-widget clearfix">
+                        <h4 class="footer-title">Services</h4>
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="{% url 'wishlist' %}">Wish List</a></li>
+                                <li><a href="{% url 'about' %}">Terms & Conditions</a></li>
+                                <li><a href="{% url 'about' %}">Promotional Offers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-6 col-sm-6 col-12">
+                    <div class="footer-widget footer-menu-widget clearfix">
+                        <h4 class="footer-title">Customer Care</h4>
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="{% url 'wishlist' %}">Wish List</a></li>
+                                <li><a href="{% url 'contact' %}">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-sm-12 col-12">
+                    <div class="footer-widget footer-newsletter-widget">
+                        <h4 class="footer-title">Newsletter</h4>
+                        <p>Subscribe to our weekly Newsletter and receive updates via email.</p>
+                        <div class="footer-newsletter">
+                            <form action="#">
+                                <input type="email" name="email" placeholder="Email*">
+                                <div class="btn-wrapper">
+                                    <button class="theme-btn-1 btn" type="submit"><i
+                                            class="fas fa-location-arrow"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                        <h5 class="mt-30">We Accept</h5>
+                        <img src="{% static 'img/icons/payment-4.png' %}" alt="Payment Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ltn__copyright-area ltn__copyright-2 section-bg-7  plr--5">
+        <div class="container-fluid ltn__border-top-2">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <div class="ltn__copyright-design clearfix">
+                        <p>All Rights Reserved @ Company <span class="current-year"></span></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 align-self-center">
+                    <div class="ltn__copyright-menu text-end">
+                        <ul>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Claim</a></li>
+                            <li><a href="#">Privacy & Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- FOOTER AREA END -->
+
+<!-- MODAL AREA START (Quick View Modal) -->
+<div class="ltn__modal-area ltn__quick-view-modal-area">
+    <div class="modal fade" id="quick_view_modal" tabindex="-1">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        <!-- <i class="fas fa-times"></i> -->
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="ltn__quick-view-modal-inner">
+                        <div class="modal-product-item">
+                            <div class="row">
+                                <div class="col-lg-6 col-12">
+                                    <div class="modal-product-img">
+                                        <img src="{% static 'img/product/4.png' %}" alt="#">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="modal-product-info">
+                                        <div class="product-ratting">
+                                            <ul>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-star-half-alt"></i></a></li>
+                                                <li><a href="#"><i class="far fa-star"></i></a></li>
+                                                <li class="review-total"><a href="#"> ( 95 Reviews )</a></li>
+                                            </ul>
+                                        </div>
+                                        <h3><a href="product-details.html">Digital Stethoscope</a></h3>
+                                        <div class="product-price">
+                                            <span>$15.00</span>
+                                            <del>$25.00</del>
+                                        </div>
+                                        <hr>
+                                        <div class="modal-product-brief">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos
+                                                repellendus repudiandae incidunt quidem pariatur expedita, quo quis
+                                                modi tempore non.</p>
+                                        </div>
+                                        <div class="modal-product-meta ltn__product-details-menu-1 d-none">
+                                            <ul>
+                                                <li>
+                                                    <strong>Categories:</strong>
+                                                    <span>
+                                                            <a href="#">Parts</a>
+                                                            <a href="#">Car</a>
+                                                            <a href="#">Seat</a>
+                                                            <a href="#">Cover</a>
+                                                        </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="ltn__product-details-menu-2 d-none">
+                                            <ul>
+                                                <li>
+                                                    <div class="cart-plus-minus">
+                                                        <input type="text" value="02" name="qtybutton"
+                                                               class="cart-plus-minus-box">
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="theme-btn-1 btn btn-effect-1"
+                                                       title="Add to Cart" data-bs-toggle="modal"
+                                                       data-bs-target="#add_to_cart_modal">
+                                                        <i class="fas fa-shopping-cart"></i>
+                                                        <span>ADD TO CART</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- <hr> -->
+                                        <div class="ltn__product-details-menu-3">
+                                            <ul>
+                                                <li>
+                                                    <a href="#" class="" title="Wishlist" data-bs-toggle="modal"
+                                                       data-bs-target="#liton_wishlist_modal">
+                                                        <i class="far fa-heart"></i>
+                                                        <span>Add to Wishlist</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="" title="Compare" data-bs-toggle="modal"
+                                                       data-bs-target="#quick_view_modal">
+                                                        <i class="fas fa-exchange-alt"></i>
+                                                        <span>Compare</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <hr>
+                                        <div class="ltn__social-media">
+                                            <ul>
+                                                <li>Share:</li>
+                                                <li><a href="#" title="Facebook"><i
+                                                        class="fab fa-facebook-f"></i></a></li>
+                                                <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                                                </li>
+                                                <li><a href="#" title="Linkedin"><i class="fab fa-linkedin"></i></a>
+                                                </li>
+                                                <li><a href="#" title="Instagram"><i
+                                                        class="fab fa-instagram"></i></a></li>
+
+                                            </ul>
+                                        </div>
+                                        <label class="float-end mb-0"><a class="text-decoration"
+                                                                         href="product-details.html"><small>View
+                                            Details</small></a></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MODAL AREA END -->
+
+<!-- MODAL AREA START (Add To Cart Modal) -->
+<div class="ltn__modal-area ltn__add-to-cart-modal-area">
+    <div class="modal fade" id="add_to_cart_modal" tabindex="-1">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="ltn__quick-view-modal-inner">
+                        <div class="modal-product-item">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="modal-product-img">
+                                        <img src="{% static 'img/product/1.png' %}" alt="#">
+                                    </div>
+                                    <div class="modal-product-info">
+                                        <h5><a href="product-details.html">Digital Stethoscope</a></h5>
+                                        <p class="added-cart"><i class="fa fa-check-circle"></i> Successfully added
+                                            to your Cart</p>
+                                        <div class="btn-wrapper">
+                                            <a href="{% url 'cart' %}" class="theme-btn-1 btn btn-effect-1">View
+                                                Cart</a>
+                                            <a href="{% url 'checkout' %}"
+                                               class="theme-btn-2 btn btn-effect-2">Checkout</a>
+                                        </div>
+                                    </div>
+                                    <!-- additional-info -->
+                                    <div class="additional-info d-none">
+                                        <p>We want to give you <b>10% discount</b> for your first order, <br> Use
+                                            discount code at checkout</p>
+                                        <div class="payment-method">
+                                            <img src="{% static 'img/icons/payment.png' %}" alt="#">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MODAL AREA END -->
+
+<!-- MODAL AREA START (Wishlist Modal) -->
+<div class="ltn__modal-area ltn__add-to-cart-modal-area">
+    <div class="modal fade" id="liton_wishlist_modal" tabindex="-1">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="ltn__quick-view-modal-inner">
+                        <div class="modal-product-item">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="modal-product-img">
+                                        <img src="{% static 'img/product/7.png' %}" alt="#">
+                                    </div>
+                                    <div class="modal-product-info">
+                                        <h5><a href="product-details.html">Digital Stethoscope</a></h5>
+                                        <p class="added-cart"><i class="fa fa-check-circle"></i> Successfully added
+                                            to your Wishlist</p>
+                                        <div class="btn-wrapper">
+                                            <a href="{% url 'wishlist' %}" class="theme-btn-1 btn btn-effect-1">View
+                                                Wishlist</a>
+                                        </div>
+                                    </div>
+                                    <!-- additional-info -->
+                                    <div class="additional-info d-none">
+                                        <p>We want to give you <b>10% discount</b> for your first order, <br> Use
+                                            discount code at checkout</p>
+                                        <div class="payment-method">
+                                            <img src="{% static 'img/icons/payment.png' %}" alt="#">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MODAL AREA END -->
+
+</div>
+<!-- Body main wrapper end -->
+
+<!-- preloader area start -->
+<div class="preloader d-none" id="preloader">
+    <div class="preloader-inner">
+        <div class="spinner">
+            <div class="dot1"></div>
+            <div class="dot2"></div>
+        </div>
+    </div>
+</div>
+<!-- preloader area end -->
+
+<!-- All JS Plugins -->
+<script src="{% static 'js/plugins.js' %}"></script>
+<!-- Main JS -->
+<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>
+
